@@ -21,12 +21,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Vega Lite Example Project">
-  <meta property="og:description" content="This is a "showcase" project that uses vega-lite for interactive viz!">
+  <meta property="og:title" content="Homework 10">
+  <meta property="og:description" content="Homework 10 project that uses vega-lite for interactive viz!">
   <meta property="og:image" content="assets/pngs/cars.png">
 
-  <title>Vega Lite Example Project</title>
-  <meta name="description" content="This is a "showcase" project that uses vega-lite for interactive viz!">
+  <title>Homework 10</title>
+  <meta name="description" content="Homework 10 project that uses vega-lite for interactive viz!">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -73,46 +73,49 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1 id="example-including-vega-lite">Example including vega-lite</h1>
+  <h1 id="group-members">Group Members</h1>
+<ul>
+  <li>Xiuyuan Wang: xiuyuan7</li>
+  <li>Jing Wang: jingw13</li>
+  <li>Yichen Huang: yichenh8</li>
+</ul>
 
-<p>Example comes from this <a href="https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html">great blog post right here</a> that was also used in <a href="https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week01/test_imports_week01.ipynb">our test import script</a>.</p>
+<h1 id="visualization-1">Visualization 1</h1>
+<p>This is a visualization about building status and their size of area seperately.</p>
 
-<p>We can use a vegachart HTML tag like so:</p>
+<vegachart schema-url="/assets/json/plot1.json" style="width: 100%"></vegachart>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;vegachart schema-url="/assets/json/cars.json" style="width: 100%"&gt;&lt;/vegachart&gt;
-</code></pre></div></div>
+<p>This is a simple plot to show the rough sight of building-status with size of buildings, so just choose the default color. Using the median instead of average, which makes the numeric footage more scientific. The building status is just three categories: Abandon, In progress and In use.</p>
 
-<vegachart schema-url="/assets/json/cars.json" style="width: 100%"></vegachart>
+<p>For the encoding, field of axis y - Square Footage which is aggregated by median to clear its data accuracy, axis x is just specified as its own datatype which is the axis y field did as well.</p>
 
-<p>In theory, you can also use <a href="https://jekyllrb.com/docs/plugins/hooks/">Jekyll hooks</a> to do it, but I haven’t figured out a way that looks nice yet.</p>
+<p>If we analysis the relationship or other reasons to create such distribution, this simple diagram can be used as addtional resource for further researches.</p>
 
-<h2 id="search-the-data--methods">Search The Data &amp; Methods</h2>
+<h1 id="visualization-2">Visualization 2</h1>
+<p>This is a linked visualization about agencies’ number of properties in different counties and the sum of square footages for properties each agency owns.</p>
 
-<p>Below is where we can put some links to both the data and the analysis code as buttons:</p>
+<vegachart schema-url="/assets/json/plot2.json" style="width: 100%"></vegachart>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="left"&gt;
-&lt;a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/vega/vega/blob/main/docs/data/cars.json"&gt;
-  The Data
-&lt;/a&gt;
-&lt;/div&gt;
+<p>In this plot we have 2 diagrams that are linked together.</p>
 
-&lt;div class="right"&gt;
-&lt;a class="m-1 btn btn-outline-primary btn-2 " href="https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html"&gt;
-  The Analysis
-&lt;/a&gt;
-&lt;/div&gt;
-</code></pre></div></div>
+<p>The upper one is a rectangular plot about the agencies and their counts of properties in each county. For the encoding of this chart, we specified the x variable and the data type, the y variable and its data type, as well as the aggregation method as count in the color parameter.</p>
+
+<p>The lower one is a bar plot describing the sum of square foots of properties owned by different agencies. This is a chart that is carried on from homework 9. In the encoding part, we specified the x variable and its data type, the y variables and its aggregation type – sum, and its data type as well. I get rid of the “tooltip“ spec for the “mark” because as this chart is linked to the upper one, this parameter would not work.</p>
+
+<p>For the design of interactivity, I followed the examples given in week 10’s lecture. Readers can select data by dragging a rectangle box in the upper chart, and the chart below will only display the diagram using data chosen in the upper chart. In this way, chart readers can inspect into specific agencies and counties they are interested in. They can also check that, for a given agency, in which county they have the most areas of property. So we believe in this way, we can bring more insight into the dataset.</p>
+
+<p>To make the plots work in altair, we didn’t change much. We just changed the original side-by-side plot code in Vega-lite by deleting the params and transformation parameters and defined an alt.selection_interval variable in Altair.</p>
 
 <!-- these are written in a combo of html and liquid -->
 
 <div class="left">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/vega/vega/blob/main/docs/data/cars.json">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/building_inventory.csv">
   The Data
 </a>
 </div>
 
 <div class="right">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Xiuyuan7/Xiuyuan7.github.io/blob/main/python_notebooks/homework_10.ipynb">
   The Analysis
 </a>
 </div>
