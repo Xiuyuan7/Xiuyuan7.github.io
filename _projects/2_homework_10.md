@@ -53,6 +53,6 @@ To make the plots work in altair, we didn't change much. We just changed the ori
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/Xiuyuan7/Xiuyuan7.github.io/blob/main/python_notebooks/homework_10.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/Xiuyuan7/Xiuyuan7.github.io/blob/main/python_notebooks/homework10.ipynb" text="The Analysis" %}
 </div>
 
