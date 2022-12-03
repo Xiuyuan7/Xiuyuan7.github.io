@@ -29,14 +29,14 @@ Over the years, public disagreement over laws of firearm ownership is only getti
 
 
 ## Our topic of interest
-We would like to look at how the total checks change along with time and inspect how political attitudes may be reflected in the trend of gun checks. In order to do this, we first need to add a column to our dataset, political with nominal values: the swing states, blue states and red states. Then we will draw a line plot with 3 lines, each for a political standingl. And the x-axis is the year, the y-axis is the number of total checks.
+We would like to look at how the total checks change along with time and inspect how political attitudes may be reflected in the trend of gun checks. In order to do this, we first need to add a column to our dataset, political with nominal values: the swing states, blue states and red states. Then we will draw a line plot with 3 lines, each for a political standing. And the x-axis is the year, the y-axis is the number of total checks.
 
 
 ## Central Visualization
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/final_project_main_chart.json" style="width: 100%"></vegachart>
 
-From the above diagram we generated, the total number of gun checks of each state in the United States are increasing by years, no matter how the political leanings of government changes. 
+From the above diagram we generated, the total number of gun checks of each state in the United States are increasing by years, no matter how the political leanings of government changes. In addition, states with Republican political standing has continuously higher number of total checks than states with Democratic political standing. Finally, swing states and democratic states have more fluctuation in the chart, which means the intention of purchasing weapons of residents in these states is easier to be influenced by government's policies. However, in republican states, the trend of this intention continuously increases.
 
 
 ## Contextual Visualization 1
