@@ -52,6 +52,7 @@ The first associated visualization is about annual background checks from 2000 t
 
 The above diagram is showing, in the United States, each state's total number of registered weapons in 2021. This visualization is from the website Statista.com and is generated according to government data and published by Statista Research Department on Oct 19, 2021. The source link of this diagram is https://www.statista.com/statistics/215655/number-of-registered-weapons-in-the-us-by-state/.
 
+The second associated visualization is a simple bar chart of numbers of registered weapons in the US in each state. The 1st ranking state is over million, which is Texas and it is a republican state or swing state，while the 2nd ranking state is Florida, which performs more like a pure swing state in recent several elections, the domain chart represents the total checks of democratic states and swing states with larger.
 
 <!-- these are written in a combo of html and liquid --> 
 
